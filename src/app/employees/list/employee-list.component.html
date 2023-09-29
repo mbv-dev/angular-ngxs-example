@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 my-3" *ngFor="let item of employees$ | async">
+      <div class="card">
+        <img src="assets/user.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <hr>
+            Email : {{item.email}} <hr>
+            Phone : {{item.phone}} <hr>
+            Username : {{item.username}} <hr>
+
+
+          <a href="#" class="btn btn-primary" [routerLink]="item.id" routerLinkActive="router-link-active" >Go to Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

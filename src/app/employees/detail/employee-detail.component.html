@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <div class="card" *ngIf="employee" style="width: 18rem">
+        <img src="assets/user.png" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{employee.name}}</h5>
+          <hr>
+            Email : {{employee.email}} <hr>
+            Phone : {{employee.phone}} <hr>
+            Username : {{employee.username}} <hr>
+
+
+          <a href="#" class="btn btn-primary" [routerLink]="['/employees']" routerLinkActive="router-link-active" >Back to List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
